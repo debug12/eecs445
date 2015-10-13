@@ -49,7 +49,12 @@ for i=1:numTestDocs
 end
 
 %Print out the classification error on the test set
-error/numTestDocs
+
+fprintf('---------------------------------\n');
+fprintf('Q3.a:\n\n');
+fprintf('The error for part A is %f\n\n', error/numTestDocs);
+fprintf('---------------------------------\n');
+ 
 
 tokenlist_array = strsplit(tokenlist);
 log_probs = zeros(numTokens, 2);
@@ -60,6 +65,10 @@ end
 
 log_probs = sortrows(log_probs, -1);
 
+fprintf('---------------------------------\n');
+fprintf('Q3.b:\n\n');
+fprintf('The top 5 most indiciative of spam are\n\n');
 for i = 1 : 5
    display(tokenlist_array(log_probs(i,2)));
 end
+fprintf('---------------------------------\n');

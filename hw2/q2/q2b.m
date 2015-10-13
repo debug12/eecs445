@@ -71,8 +71,7 @@ for i = 1:n
 end
 
 fprintf('----------------------------------------\n');
-fprintf('q2b:\n\n');
-disp('The resultant w matrix is '); disp(w);
+fprintf('Q2.b:\n\n');
 fprintf('%f percent accuracy\n\n', (accuracy/50.0)*100);
 fprintf('-----------------------------------------\n');
 

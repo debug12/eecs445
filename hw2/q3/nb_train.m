@@ -1,5 +1,5 @@
 
-[spmatrix, tokenlist, trainCategory] = readMatrix('MATRIX.TRAIN.1400');
+[spmatrix, tokenlist, trainCategory] = readMatrix('MATRIX.TRAIN');
 
 trainMatrix = full(spmatrix);
 numTrainDocs = size(trainMatrix, 1);
