@@ -42,18 +42,14 @@ prob_spam_prior = num_spam/numTrainDocs;
 for i = 1:numTrainDocs
     if trainCategory(i) == 1
        %spam
-       spamcountinner = 0;
+       spamcount = 0;
        for j = 1:numTokens
-           spamcountinner = spamcountinner + trainMatrix(i,j);
+           spamcount = spamcount + trai
        end
-       count_spam_words = count_spam_words + spamcountinner;
+       count_spam_words = count_spam_words + sum(trainMatrix(i,:));
     else
-       %nonspam
-       nonspamcountinner = 0;
-       for j = 1:numTokens
-            nonspamcountinner = nonspamcountinner + trainMatrix(i,j);
-       end
-       count_nonspam_words = count_nonspam_words + nonspamcountinner;
+       %nonspam 
+       count_nonspam_words = count_nonspam_words + sum(trainMatrix(i,:));
     end
 end
 
