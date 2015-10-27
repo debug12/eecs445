@@ -35,6 +35,10 @@ for numIterations = 1:6
             correct = correct + 1;
         end
     end
-    display(iterationCount(numIterations));
-    display(correct/n);
+    fprintf('----------------------------------------\n');
+    fprintf(strcat('q3b number iterations:',int2str(iterationCount(numIterations)),'\n\n'));
+    display(w);
+    display(b);
+    fprintf('%f percent accuracy\n\n', (correct/n)*100);
+    fprintf('-----------------------------------------\n');
 end
