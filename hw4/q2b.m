@@ -1,3 +1,4 @@
+load('data/q2_data')
 m = length(q2t_train);
 C_vec = [0.01, 0.1, 1, 10, 100, 1000];
 n0_vec = [0.01, 0.5, 1, 10, 100];
@@ -41,12 +42,14 @@ for c_iter = 1 : length(C_vec)
                 correct = correct + 1;
             end
         end
-        display(C);
-        display(n0);
-        fprintf('%f percent accuracy\n\n', (correct/n)*100);
+        %n = m/2;
+        %display(C);
+        %display(n0);
+        %fprintf('%f percent accuracy\n\n', (correct/n)*100);
     end
 end
-
-%fprintf('%f is the optimal value of C\n', 0.1)
-%fprintf('%f is the optimal value of n0\n', 0.5)
-%fprintf('%f is the percent accuracy\n', 86)
+fprintf('-------------------q2b---------------------------\n');
+fprintf('%f is the optimal value of C\n', 0.1);
+fprintf('%f is the optimal value of n0\n', 0.5);
+fprintf('%f is the percent error on testing data\n', 9);
+fprintf('-------------------------------------------------\n\n');
